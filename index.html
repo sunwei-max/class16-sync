@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>16班同步填写</title>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-title" content="16班同步填写">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0f766e">
+<style>
+  html,body{margin:0;height:100%}
+  body{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+    background:linear-gradient(180deg,#fff,#f1f5f9);color:#0f766e;
+    font:16px/1.6 -apple-system,"PingFang SC",sans-serif;text-align:center}
+  img{width:108px;height:108px;border-radius:24px;box-shadow:0 6px 20px rgba(15,118,110,.18)}
+  .t{font-size:18px;font-weight:700}
+  .s{color:#64748b;font-size:13px}
+  .spin{width:22px;height:22px;border:3px solid #cbd5e1;border-top-color:#0f766e;border-radius:50%;animation:r 1s linear infinite}
+  @keyframes r{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+  <img src="icon-192.png" alt="16班同步填写">
+  <div class="t">正在打开「手机同步填写」</div>
+  <div class="spin"></div>
+  <div class="s">若未自动跳转，请点此 <a id="lk" href="#">手动打开</a></div>
+<script>
+  var TARGET = "https://a0a57e3933f745ed9a373c0efa8f391d.app.codebuddy.work/?t=zky_03c791aad0ea4d91";
+  document.getElementById("lk").href = TARGET;
+  setTimeout(function(){ location.replace(TARGET); }, 300);
+</script>
+</body>
+</html>
